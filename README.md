@@ -1,5 +1,5 @@
 # headtracker
-Arduino based head tracker for OVBOX and TASCAR
+Arduino based head tracker for OVBOX and TASCAR, using an ESP8266 microcontroller and a GY-521 (MPU6050 based) motion processor board.
 
 ## Wiring
 
