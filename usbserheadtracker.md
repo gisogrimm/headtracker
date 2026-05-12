@@ -77,15 +77,15 @@ To interpret the data in your software, you must convert the raw integers back t
 
 **1. Timestamp:**
 The value is in microseconds. To get seconds:
-$$ t_{seconds} = \frac{\text{raw\_timestamp}}{1,000,000} $$
+$t_{seconds} = \frac{\text{raw\_timestamp}}{1,000,000}$
 
 **2. Quaternions:**
 The raw values are multiplied by $65,536$ ($2^{16}$). To get the normalized quaternion ($w, x, y, z$):
-$$ q_{float} = \frac{\text{raw\_q}}{65536.0} $$
+$q_{float} = \frac{\text{raw\_q}}{65536.0}$
 
 **3. Rotation (Integrated Gyro):**
 The raw values are multiplied by $128$ ($2^{7}$). To get the rotation value:
-$$ rot_{float} = \frac{\text{raw\_rot}}{128.0} $$
+$rot_{float} = \frac{\text{raw\_rot}}{128.0}$
 
 ---
 
