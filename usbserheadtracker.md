@@ -76,16 +76,13 @@ Every data packet consists of **40 bytes** and starts with a 4-byte header.
 To interpret the data in your software, you must convert the raw integers back to floating-point numbers.
 
 **1. Timestamp:**
-The value is in microseconds. To get seconds:
-$t_{seconds} = \frac{\text{raw\_timestamp}}{1,000,000}$
+The value is in microseconds.
 
 **2. Quaternions:**
-The raw values are multiplied by $65,536$ ($2^{16}$). To get the normalized quaternion ($w, x, y, z$):
-$q_{float} = \frac{\text{raw\_q}}{65536.0}$
+The raw values are multiplied by $65,536$ ($2^{16}$). To get the normalized quaternion ($w, x, y, z$), divide by $2^{16}$.
 
 **3. Rotation (Integrated Gyro):**
-The raw values are multiplied by $128$ ($2^{7}$). To get the rotation value:
-$rot_{float} = \frac{\text{raw\_rot}}{128.0}$
+The raw values are multiplied by $128$ ($2^{7}$). To get the rotation value, divide by $2^{7}$.
 
 ---
 
